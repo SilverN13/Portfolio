@@ -1,0 +1,144 @@
+/*================= 
+Table of contents
+===================
+1.Left Section
+2.Right Secttion
+*/
+
+main.flex {
+  gap: 2.4rem;
+  align-items: start;
+}
+
+/*============== 
+1.Left Section 
+ ===============*/
+main section.leftSection {
+  flex-direction: column;
+  gap: 10px;
+}
+main section.leftSection button {
+  background-color: rgba(36, 37, 46, 1);
+  width: 11rem;
+  padding: 0.7rem 0;
+  text-align: center;
+  font-size: 1.05rem;
+  text-transform: capitalize;
+  opacity: 0.5;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+main section.leftSection button.active {
+  opacity: 1;
+  border: 1px solid var(--blue);
+  letter-spacing: 0.6px;
+  padding: 0.8rem 0;
+}
+main section.leftSection button:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.light main section.leftSection button.active {
+  border: 1px solid #000;
+}
+/*============== 
+ End Left Section 
+ ===============*/
+
+/*============== 
+2.Right Section 
+ ===============*/
+main section.rightSection {
+  flex-grow: 1;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 2rem;
+  justify-content: center;
+}
+.card {
+  border: 1px solid rgba(93, 188, 252, 0.3);
+  border-radius: 15px;
+  transition: 0.3s;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+  );
+  box-shadow:
+    -1px 1px 1px rgba(0, 0, 0, 0.2),
+    1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.light .card {
+  border: none;
+}
+.card:hover {
+  border: 1px solid var(--blue);
+
+  border-radius: 15px;
+  rotate: 1deg;
+  scale: 1.01;
+  cursor: pointer;
+}
+.light .card:hover {
+  border: none;
+  background-color: rgb(248, 248, 248);
+}
+.card .box {
+  padding: 1rem 0.4rem;
+}
+.card .box .title {
+  color: var(--title);
+  text-transform: capitalize;
+}
+.card .box .subTitle {
+  color: var(--subTilte);
+  font-size: 0.8rem;
+  margin: 0.7rem 0 1.1rem 0;
+}
+.card .box .icons {
+  justify-content: space-between;
+}
+.card .icon-link,
+.card .icon-github {
+  color: var(--subTilte);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card .icon-link:hover,
+.card .icon-github:hover {
+  color: var(--tilte);
+  font-size: 1.3rem;
+}
+.card .link {
+  color: var(--blue);
+  gap: 5px;
+  font-size: 1rem;
+}
+.card .link:hover {
+  font-size: 1.2rem;
+}
+/*============== 
+ End Right Section 
+ ===============*/
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  main.flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.64rem;
+  }
+
+  main section.leftSection {
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  main section.leftSection button {
+    width: 7rem;
+    padding: 0.8rem 0;
+    font-size: 0.9rem;
+  }
+}

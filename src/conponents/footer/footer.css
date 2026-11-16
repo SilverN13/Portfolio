@@ -1,0 +1,39 @@
+/*================= 
+Table of contents
+===================
+1.
+2.
+3.Responsive Design (media query)
+*/
+
+/*============== 
+1.
+ ===============*/
+footer.flex {
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+footer ul.flex {
+  gap: 1rem;
+}
+footer ul.flex a {
+  color: var(--subTilte);
+  font-size: 0.9rem;
+  transition: 0.6s;
+}
+footer ul.flex a:hover {
+  color: var(--blue);
+  font-size: 1rem;
+  font-weight: 500;
+}
+footer.flex p {
+  color: rgb(113, 113, 122);
+}
+
+@media (max-width: 800px) {
+  footer.flex {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 1.9rem;
+  }
+}
